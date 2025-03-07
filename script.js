@@ -5,7 +5,7 @@ function generateTable() {
         return;
     }
 
-    fetch("http://127.0.0.1:5000/generate-table", {
+    fetch("https://data-py-production.up.railway.app/generate-table", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
