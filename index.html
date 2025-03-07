@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequency Table</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Frequency Table Generator</h2>
+    <input type="text" id="numbersInput" placeholder="Enter numbers separated by commas">
+    <br>
+    <button onclick="generateTable()">Generate Table</button>
+
+    <h3>Frequency Table</h3>
+    <table id="freqTable">
+        <thead>
+            <tr>
+                <th>Class Interval (CI)</th>
+                <th>Lower CB</th>
+                <th>Upper CB</th>
+                <th>Midpoint</th>
+                <th>Frequency (f)</th>
+                <th>f × x</th>
+                <th>Cumulative Frequency (CF)</th>
+                <th>f × log(x)</th>
+                <th>f / x</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be inserted dynamically -->
+        </tbody>
+    </table>
+
+    <h3>Summations & Statistics</h3>
+    <p><b>Total Values:</b> <span id="sumF"></span></p>
+    <p><b>∑f:</b> <span id="sumFText"></span></p>
+    <p><b>∑f(x):</b> <span id="sumFX"></span></p>
+    <p><b>∑f[log(x)]:</b> <span id="sumFLogX"></span></p>
+    <p><b>∑f/x:</b> <span id="sumFDivX"></span></p>
+    <p><b>Mean (AM):</b> <span id="mean"></span></p>
+    <p><b>Median (Q2):</b> <span id="median"></span></p>
+    <p><b>First Quartile (Q1):</b> <span id="q1"></span></p>
+    <p><b>Third Quartile (Q3):</b> <span id="q3"></span></p>
+    <p><b>Mode:</b> <span id="mode"></span></p>
+    <p><b>8th Decile (D8):</b> <span id="d8"></span></p>
+    <p><b>71st Percentile (P71):</b> <span id="p71"></span></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
