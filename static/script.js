@@ -5,7 +5,7 @@ function generateTable() {
         return;
     }
 
-    fetch("https://data-py-rust.vercel.app/generate-table", {
+    fetch("https://data-gold-three.vercel.app/generate-table", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
