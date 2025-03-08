@@ -5,7 +5,7 @@ function generateTable() {
         return;
     }
 
-    fetch("https://data-gold-three.vercel.app/generate-table", {
+    fetch("https://wasiq2144.pythonanywhere.com/generatetable", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
