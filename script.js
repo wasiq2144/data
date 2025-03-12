@@ -7,8 +7,9 @@ function generateTable() {
         return;
     }
 
-    // Compute Mean & Median
-    const mean = numbers.reduce((sum, num) => sum + num, 0) / numbers.length;
+    // Compute Sum, Mean & Median
+    const sumX = numbers.reduce((sum, num) => sum + num, 0); // Sum of x
+    const mean = sumX / numbers.length;
     const sortedNumbers = [...numbers].sort((a, b) => a - b);
     const median = sortedNumbers.length % 2 === 0
         ? (sortedNumbers[sortedNumbers.length / 2 - 1] + sortedNumbers[sortedNumbers.length / 2]) / 2
@@ -53,6 +54,7 @@ function generateTable() {
     });
 
     // Update table footers
+    document.getElementById("sum_x").innerText = sumX.toFixed(2);
     document.getElementById("sum_x2").innerText = sumX2.toFixed(2);
     document.getElementById("sum_x3").innerText = sumX3.toFixed(2);
     document.getElementById("sum_x4").innerText = sumX4.toFixed(2);
